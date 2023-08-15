@@ -1,0 +1,27 @@
+/* dashboard.component.css */
+
+/* Center align the card content */
+.card .body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Style for the category name */
+  .category-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  /* Style for the charity count */
+  .charity-count {
+    font-size: 14px;
+    color: #e91e63;
+    font-weight: bold;
+  }
+  ::ng-deep #chart {
+    height: 440px;
+  }
+  

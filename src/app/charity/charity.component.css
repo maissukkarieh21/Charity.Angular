@@ -1,0 +1,46 @@
+.donation-modal {
+    max-width: 400px;
+    padding: 20px;
+    margin: auto;
+  }
+  
+  .example-container {
+    margin-bottom: 15px;
+  }
+  
+  button[mat-button] {
+    display: block;
+    margin: auto;
+  }
+
+  /* Add this to your component's CSS file */
+.donation-modal {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.donation-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container {
+  margin-bottom: 20px;
+}
+
+.donate-button {
+  align-self: flex-end;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.donate-button:hover {
+  background-color: #0056b3;
+}

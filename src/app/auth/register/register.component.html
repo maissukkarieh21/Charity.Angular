@@ -1,0 +1,55 @@
+
+<body class="theme-blush">
+
+    <div class="authentication">    
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-12">
+                    <form class="card auth_form" [formGroup]="registerForm">
+                        <div class="header">
+                            <img class="logo" src="assets/AdminAssets/assets/images/logo.svg" alt="">
+                            <h5>Sign Up</h5>
+                            <span>Register a new membership</span>
+                        </div>
+                        <div class="body">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control"placeholder="Username" formControlName="username" />
+                             
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="zmdi zmdi-account-circle"></i></span>
+                                </div>
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control"placeholder="Enter Email" formControlName="email" />
+                             
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="zmdi zmdi-email"></i></span>
+                                </div>
+                            </div>                        
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control"placeholder="Password" formControlName="password" />
+                              
+                                <div class="input-group-append">                                
+                                    <span class="input-group-text"><i class="zmdi zmdi-lock"></i></span>
+                                </div>                            
+                            </div>
+                           
+                            <a  class="link" class="btn btn-primary btn-block waves-effect waves-light"(click)="register()">SIGN UP</a>
+                            <div class="signin_with mt-3">
+                                <a class="link"  (click)="toLogin()" style="cursor: pointer;">Do you have account?</a>
+                            </div>
+                        </div>
+                    </form>
+                 
+                </div>
+                <div class="col-lg-8 col-sm-12">
+                    <div class="card">
+                        <img src="assets/AdminAssets/assets/images/signup.svg" alt="Sign Up" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    </body>

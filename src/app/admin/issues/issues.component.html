@@ -1,0 +1,150 @@
+
+<section class="content">
+  <app-sidebar></app-sidebar>
+
+  
+    <div class="">
+   <div class="body_scroll">
+    <div class="block-header">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <h2>Issues List</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Admin</a></li>
+                <li class="breadcrumb-item">Issues</li>
+                </ul>
+            </div>
+        
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="table-responsive">
+                        <table class="table table-hover product_item_list c_table theme-color mb-0">
+                            <thead>
+                              <tr>
+                                <th style="color:#555555">
+                                  <a>User Name </a>
+                                </th>
+                                <th style="color:#555555">
+                                  <a>Issue </a>
+                                </th>
+                                <th style="color:#555555">Status </th>
+                                <th style="color:#555555">Date </th>
+
+                                <th style="color:#555555">Operation</th>
+                             
+
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let issue of issues">
+                           
+                                
+                                <td>
+                                  <h5>{{ issue.username }}</h5>
+                                </td>
+                                <td>
+                                  <h5>{{ issue.issuedescription }}</h5>
+                                </td>
+                                <td>
+                                    <span class="col-green">{{ issue.status }}</span>
+                                </td>
+                                <td>
+                                    <h5>{{ issue.datereported }}</h5>
+                                  </td>
+                                <td>
+                                    <button class="btn btn-wa waves-effect waves-float btn-sm waves-green" (click)="detailModal('details', issue)">Detail</button>
+                                    &nbsp;
+                                    <button class="btn btn-primary waves-effect waves-float btn-sm waves-green" (click)="editModal( issue)">reply</button>
+                                    &nbsp;
+                                    <button class="btn btn-danger waves-effect waves-float btn-sm waves-green" (click)="deleteIssue(issue.id)">Delete</button>
+
+                                </td>
+                             
+                              </tr>
+
+                            </tbody>
+
+                          </table>
+                          
+<ng-container *ngIf="selectedIssue">
+    <div class="modal-backdrop fade show"></div>
+    <div class="modal" tabindex="-1" role="dialog" style="display: block;">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Issue Details</h5>
+            <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+            <p>Issue: {{ selectedIssue.issuedescription }}</p>
+            <p>Response: {{ selectedIssue.response }}</p>
+            <p>Status: {{ selectedIssue.status }}</p>
+            <p>Date: {{ selectedIssue.datereported }}</p>
+
+        
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </ng-container>
+
+  <ng-container *ngIf="selectedEditIssue">
+    <div class="modal-backdrop fade show"></div>
+    <div class="modal" tabindex="-1" role="dialog" style="display: block;">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Reply</h5>
+            <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+            <form (ngSubmit)="updateIssue()" [formGroup]="edit" >
+              <div>
+                <input  type="hidden"[(ngModel)]="selectedEditIssue.id" formControlName="id" name="id">
+                <input  type="hidden" [(ngModel)]="Responded" formControlName="status" name="status">
+
+                <input type="text" class="form-control"   formControlName="response"    name="response"required >
+                <div *ngIf="f['response'].touched && f['response'].invalid" class="alert alert-danger">
+                  <div *ngIf="f['response'].errors && f['response'].errors['required']">Issue name is required.</div>
+              </div>
+              </div>
+           
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+                <button type="submit" class="btn btn-primary">Reply</button>
+              </div>
+            </form>
+          </div>
+      
+        </div>
+      </div>
+    </div>
+  </ng-container>
+ 
+ 
+                    </div>
+                </div>
+          
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</section>

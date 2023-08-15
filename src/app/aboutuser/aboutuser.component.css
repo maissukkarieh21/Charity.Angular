@@ -1,0 +1,12 @@
+/* Add your custom styles here */
+.background_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Place the background image behind other content */
+}
+
+/* Add your existing CSS styles for video_bg_1, video_activite, popup-video, flaticon-ui, container, activites_info, section_title, para_2, boxed-btn4, etc. */

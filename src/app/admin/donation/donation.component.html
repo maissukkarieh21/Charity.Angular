@@ -1,0 +1,75 @@
+
+<section class="content">
+  <app-sidebar></app-sidebar>
+
+  
+    <div class="">
+   <div class="body_scroll">
+    <div class="block-header">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <h2>Donations List</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Admin</a></li>
+                <li class="breadcrumb-item">Donations</li>
+                </ul>
+            </div>
+          
+        </div>
+    </div>
+
+    
+
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="table-responsive">
+                        <table class="table table-hover product_item_list c_table theme-color mb-0">
+                            <thead>
+                              <tr>
+                                <th style="color:#555555">User Name</th>
+                                <th style="color:#555555">Charity Name</th>
+                                <th style="color:#555555">Amount</th>
+                                <th style="color:#555555">Donation Date</th>
+                                <th style="color:#555555">Status</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+
+                              <tr *ngFor="let donation of donations">
+                           
+                                <td>
+                                  <h5>{{ donation.username }}</h5>
+                                </td>
+                                <td>
+                                  <h5>{{ donation.charityname}}</h5>
+                                </td>
+                                <td>
+                                    <h5>{{ donation.amount }}</h5>
+                                  </td>
+                                  <td>
+                                    <h5>{{ donation.donationdate }}</h5>
+                                  </td>
+                                  <td>
+                                    <h5>{{ donation.status }}</h5>
+                                  </td>
+                              
+                              </tr>
+
+                            </tbody>
+
+                          </table>
+                          
+
+ 
+ 
+                    </div>
+                </div>
+          
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</section>

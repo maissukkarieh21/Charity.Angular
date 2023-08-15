@@ -1,0 +1,87 @@
+/* Add your custom styles here */
+.container {
+  padding: 20px;
+}
+
+.blogitem {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blogitem-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.blogitem-content {
+  padding: 15px;
+}
+
+.blogitem-content h5 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+.slider-container {
+  margin-top: 20px;
+}
+
+.slider {
+  display: flex;
+  overflow-x: scroll;
+  padding: 10px;
+}
+
+.testimonial-card {
+  flex: 0 0 300px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-right: 15px;
+}
+
+.testimonial-card p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.testimonial-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.badge-default {
+  background-color: #17a2b8;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+
+/* Add your custom styles here */
+.background_image {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background_image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
